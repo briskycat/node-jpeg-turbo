@@ -11,7 +11,7 @@
       'include_dirs': [
         '<!(node -e "require(\'nan\')")'
       ],
-      'libraries': [ "libjpeg.a" ],
+      'libraries': [ "-l:libjpeg.a" ],
       'conditions': [
         ['OS=="mac"', {
           'xcode_settings': {
