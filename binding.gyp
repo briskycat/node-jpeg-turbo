@@ -2,9 +2,6 @@
   'targets': [
     {
       'target_name': 'jpegturbo',
-      'dependencies': [
-        'deps/libjpeg-turbo.gyp:jpeg-turbo'
-      ],
       'sources': [
         'src/buffersize.cc',
         'src/compress.cc',
@@ -14,11 +11,15 @@
       'include_dirs': [
         '<!(node -e "require(\'nan\')")'
       ],
+      'libraries': [ "libjpeg.a" ],
       'conditions': [
         ['OS=="mac"', {
           'xcode_settings': {
             'MACOSX_DEPLOYMENT_TARGET': '10.9'
-          }
+          },
+          'include_dirs': [
+            '/opt/local/include'
+          ]
         }]
       ]
     }
