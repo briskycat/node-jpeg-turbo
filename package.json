@@ -1,5 +1,5 @@
 {
-  "name": "jpeg-turbo",
+  "name": "tjpeg",
   "version": "0.4.99",
   "description": "Limited libjpeg-turbo bindings for Node.js.",
   "keywords": [
@@ -10,12 +10,15 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/briskycat/node-jpeg-turbo"
+    "url": "https://github.com/briskycat/node-tjpeg"
   },
   "main": "./index",
   "dependencies": {
     "bindings": "^1.5.0",
-    "nan": "^2.14.0",
-    "node-gyp": "^4.0.0"
+    "cmake-js": "^5.2.0",
+    "nan": "^2.14.0"
+  },
+  "scripts": {
+    "install": "cmake-js compile"
   }
 }
